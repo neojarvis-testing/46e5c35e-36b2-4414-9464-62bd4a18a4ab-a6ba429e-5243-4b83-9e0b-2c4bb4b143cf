@@ -11,51 +11,49 @@ public class HomeDepotResourcesStep {
     ExtentTest test = Hooks.reports.createTest("Resources");
     HomeDepotFooterResources homeDepotFooterResources = new HomeDepotFooterResources(test);
 
-
-    
     @When("I click on special and offers.")
     public void i_click_on_special_and_offers() {
-    homeDepotFooterResources.clickOnSpecialsOffers();
+        homeDepotFooterResources.clickOnSpecialsOffers();
     }
     @When("I verify savings center.")
     public void i_verify_savings_center() {
-    homeDepotFooterResources.verifySavingsCenter();
+        homeDepotFooterResources.verifySavingsCenter();
     }
     @When("I click on military discount benefit.")
     public void i_click_on_military_discount_benefit() {
-    homeDepotFooterResources.clickOnMilitaryDiscountBenefit();
+        homeDepotFooterResources.clickOnMilitaryDiscountBenefit();
     }
     @When("I verify military.")
     public void i_verify_military() {
-    homeDepotFooterResources.verifyMilitary();
+        homeDepotFooterResources.verifyMilitary();
     }
     @When("I click on DIY projects and ideas.")
     public void i_click_on_diy_projects_and_ideas() {
-    homeDepotFooterResources.clickOnDIYProjectsAndIdeas();
+        homeDepotFooterResources.clickOnDIYProjectsAndIdeas();
     }
     @When("I verify DIY project.")
     public void i_verify_diy_project() {
-    homeDepotFooterResources.verifyDIYProject();
+        homeDepotFooterResources.verifyDIYProject();
     }
     @When("I click on truck and tool rental.")
     public void i_click_on_truck_and_tool_rental() {
-    homeDepotFooterResources.clickOnTruckAndToolRental();
+        homeDepotFooterResources.clickOnTruckAndToolRental();
     }
     @When("I verify tool and truck.")
     public void i_verify_tool_and_truck() {
-    homeDepotFooterResources.verifyToolAndTruck();
+        homeDepotFooterResources.verifyToolAndTruck();
     }
     @When("I click on installation and services.")
     public void i_click_on_installation_and_services() {
-    homeDepotFooterResources.clickOnInstallationAndServices();
+        homeDepotFooterResources.clickOnInstallationAndServices();
     }
     @When("I verify services.")
     public void i_verify_services() {
-    homeDepotFooterResources.verifyServices();
+        homeDepotFooterResources.verifyServices();
     }
     @When("I click on moving supplies and rentals.")
     public void i_click_on_moving_supplies_and_rentals() {
-    homeDepotFooterResources.clickOnMovingSuppliesAndRentals();
+        homeDepotFooterResources.clickOnMovingSuppliesAndRentals();
     }
     @When("I verify organisation.")
     public void i_verify_organisation() {
@@ -63,26 +61,26 @@ public class HomeDepotResourcesStep {
     }
     @When("I click on protection plans.")
     public void i_click_on_protection_plans() {
-    homeDepotFooterResources.clickOnProtectionPlans();
+        homeDepotFooterResources.clickOnProtectionPlans();
     }
     @When("I verify protection plans.")
     public void i_verify_protection_plans() {
-    homeDepotFooterResources.verifyProtectionPlans();
+        homeDepotFooterResources.verifyProtectionPlans();
     }
     @When("I click on rebate center.")
     public void i_click_on_rebate_center() {
-    homeDepotFooterResources.clickOnRebateCenter();
+        homeDepotFooterResources.clickOnRebateCenter();
     }
     @When("I verify rebate.")
     public void i_verify_rebate() {
-    homeDepotFooterResources.verifyRebate();
+        homeDepotFooterResources.verifyRebate();
     }
     @When("I click on gift cards.")
     public void i_click_on_gift_cards() {
-    homeDepotFooterResources.clickOnGiftCards();
+        homeDepotFooterResources.clickOnGiftCards();
     }
     @Then("I verify gift card.")
     public void i_verify_gift_card() {
-    homeDepotFooterResources.verifyGiftCard();
+        homeDepotFooterResources.verifyGiftCard();
     }
 }

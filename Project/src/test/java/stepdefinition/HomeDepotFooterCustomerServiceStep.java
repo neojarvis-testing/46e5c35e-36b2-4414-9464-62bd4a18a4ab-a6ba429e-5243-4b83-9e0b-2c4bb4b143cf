@@ -11,8 +11,6 @@ public class HomeDepotFooterCustomerServiceStep {
     ExtentTest test = Hooks.reports.createTest("Customer services");
     HomeDepotFooterPageCustomerService homeDepotFooterPageCustomerService = new HomeDepotFooterPageCustomerService(test);
 
-
-    
     @When("I click on check order status.")
     public void i_click_on_check_order_status() {
         homeDepotFooterPageCustomerService.clickOnCheckOrderStatus();

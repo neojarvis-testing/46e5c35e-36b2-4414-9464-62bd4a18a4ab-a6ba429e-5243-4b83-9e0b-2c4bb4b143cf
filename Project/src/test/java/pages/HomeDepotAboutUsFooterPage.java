@@ -9,6 +9,7 @@ import uistore.HomeDepotAboutUsFooterPageLocator;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
+import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
@@ -30,12 +31,14 @@ public class HomeDepotAboutUsFooterPage {
         try {
             helper.waitForElementToBeVisible(HomeDepotAboutUsFooterPageLocator.careers, 10);
             helper.scrollToEnd();
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Careers", test, HomeDepotAboutUsFooterPageLocator.careers);
             helper.clickOnElement(HomeDepotAboutUsFooterPageLocator.careers);
             LoggerHandler.info("Clicked on Careers");
             test.log(Status.PASS, "Clicked on Careers");
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Careers");
             test.log(Status.FAIL, "Not Clicked on Careers");
+            Screenshot.errorScreenShot("Not Clicked on Careers");
         }
     }
     /*
@@ -68,12 +71,14 @@ public class HomeDepotAboutUsFooterPage {
             helper.navigateBack();
             helper.waitForElementToBeVisible(HomeDepotAboutUsFooterPageLocator.corporateInformation, 10);
             helper.scrollToEnd();
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Corporate Information", test, HomeDepotAboutUsFooterPageLocator.corporateInformation);
             helper.clickOnElement(HomeDepotAboutUsFooterPageLocator.corporateInformation);
             LoggerHandler.info("Clicked on Corporate Information");
             test.log(Status.PASS, "Clicked on Corporate Information");
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Corporate Information");
             test.log(Status.FAIL, "Not Clicked on Corporate Information");
+            Screenshot.errorScreenShot("Not Clicked on Corporate Information");
         }
     }
     /*
@@ -106,12 +111,14 @@ public class HomeDepotAboutUsFooterPage {
             helper.navigateBack();
             helper.waitForElementToBeVisible(HomeDepotAboutUsFooterPageLocator.digitalNewsroom, 10);
             helper.scrollToEnd();
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Digital Newsroom", test, HomeDepotAboutUsFooterPageLocator.digitalNewsroom);
             helper.clickOnElement(HomeDepotAboutUsFooterPageLocator.digitalNewsroom);
             LoggerHandler.info("Clicked on Digital Newsroom");
             test.log(Status.PASS, "Clicked on Digital Newsroom");
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Digital Newsroom");
             test.log(Status.FAIL, "Not Clicked on Digital Newsroom");
+            Screenshot.errorScreenShot("Not Clicked on Digital Newsroom");
         }
     }
     /*
@@ -144,12 +151,14 @@ public class HomeDepotAboutUsFooterPage {
             helper.navigateBack();
             helper.waitForElementToBeVisible(HomeDepotAboutUsFooterPageLocator.homeDepotFoundation, 10);
             helper.scrollToEnd();
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Home Depot Foundation", test, HomeDepotAboutUsFooterPageLocator.homeDepotFoundation);
             helper.clickOnElement(HomeDepotAboutUsFooterPageLocator.homeDepotFoundation);
             LoggerHandler.info("Clicked on Home Depot Foundation");
             test.log(Status.PASS, "Clicked on Home Depot Foundation");
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Home Depot Foundation");
             test.log(Status.FAIL, "Not Clicked on Home Depot Foundation");
+            Screenshot.errorScreenShot("Not Clicked on Home Depot Foundation");
         }
     }
     /*
@@ -182,12 +191,14 @@ public class HomeDepotAboutUsFooterPage {
             helper.navigateBack();
             helper.waitForElementToBeVisible(HomeDepotAboutUsFooterPageLocator.investorRelation, 10);
             helper.scrollToEnd();
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Investor Relations", test, HomeDepotAboutUsFooterPageLocator.investorRelation);
             helper.clickOnElement(HomeDepotAboutUsFooterPageLocator.investorRelation);
             LoggerHandler.info("Clicked on Investor Relations");
             test.log(Status.PASS, "Clicked on Investor Relations");
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Investor Relations");
             test.log(Status.FAIL, "Not Clicked on Investor Relations");
+            Screenshot.errorScreenShot("Not Clicked on Investor Relations");
         } 
     }
     /*
@@ -220,12 +231,14 @@ public class HomeDepotAboutUsFooterPage {
             helper.navigateBack();
             helper.waitForElementToBeVisible(HomeDepotAboutUsFooterPageLocator.governmentCustomers, 10);
             helper.scrollToEnd();
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Government Customers", test, HomeDepotAboutUsFooterPageLocator.governmentCustomers);
             helper.clickOnElement(HomeDepotAboutUsFooterPageLocator.governmentCustomers);
             LoggerHandler.info("Clicked on Government Customers");
             test.log(Status.PASS, "Clicked on Government Customers");
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Government Customers");
             test.log(Status.FAIL, "Not Clicked on Government Customers");
+            Screenshot.errorScreenShot("Not Clicked on Government Customers");
         }
     }
     /*
@@ -258,12 +271,14 @@ public class HomeDepotAboutUsFooterPage {
             helper.navigateBack();
             helper.waitForElementToBeVisible(HomeDepotAboutUsFooterPageLocator.suppliersProviders, 10);
             helper.scrollToEnd();
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Suppliers & Providers", test, HomeDepotAboutUsFooterPageLocator.suppliersProviders);
             helper.clickOnElement(HomeDepotAboutUsFooterPageLocator.suppliersProviders);
             LoggerHandler.info("Clicked on Suppliers & Providers");
             test.log(Status.PASS, "Clicked on Suppliers & Providers");
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Suppliers & Providers");
             test.log(Status.FAIL, "Not Clicked on Suppliers & Providers");
+            Screenshot.errorScreenShot("Not Clicked on Suppliers & Providers");
         }
     }
     /*
@@ -296,12 +311,14 @@ public class HomeDepotAboutUsFooterPage {
             helper.navigateBack();
             helper.waitForElementToBeVisible(HomeDepotAboutUsFooterPageLocator.affiliateProgram, 10);
             helper.scrollToEnd();
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Affiliate Program", test, HomeDepotAboutUsFooterPageLocator.affiliateProgram);
             helper.clickOnElement(HomeDepotAboutUsFooterPageLocator.affiliateProgram);            
             LoggerHandler.info("Clicked on Affiliate Program");
             test.log(Status.PASS, "Clicked on Affiliate Program");
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Affiliate Program");
             test.log(Status.FAIL, "Not Clicked on Affiliate Program");
+            Screenshot.errorScreenShot("Not Clicked on Affiliate Program");
         }
     }
     /*
@@ -334,6 +351,7 @@ public class HomeDepotAboutUsFooterPage {
             helper.navigateBack();
             helper.waitForElementToBeVisible(HomeDepotAboutUsFooterPageLocator.ecoActions, 10);
             helper.scrollToEnd();
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Eco Actions", test, HomeDepotAboutUsFooterPageLocator.ecoActions);
             helper.clickOnElement(HomeDepotAboutUsFooterPageLocator.ecoActions);
             LoggerHandler.info("Clicked on Eco Actions");
             test.log(Status.PASS, "Clicked on Eco Actions");
@@ -341,6 +359,7 @@ public class HomeDepotAboutUsFooterPage {
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Eco Actions");
             test.log(Status.FAIL, "Not Clicked on Eco Actions");
+            Screenshot.errorScreenShot("Not Clicked on  Eco Actions");
         }
     }
     /*

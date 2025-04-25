@@ -9,6 +9,7 @@ import uistore.HomeDepotCreditOffersPageLocator;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
+import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
@@ -30,12 +31,14 @@ public class HomeDepotCreditOffersPage {
         try {
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.creditOffers, 10);
             helper.scrollToEnd();
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Credit Offers", test, HomeDepotCreditOffersPageLocator.creditOffers);
             helper.clickOnElement(HomeDepotCreditOffersPageLocator.creditOffers);
             LoggerHandler.info("Clicked on Credit Offers");
             test.log(Status.PASS, "Clicked on Credit Offers");
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Credit Offers");
             test.log(Status.FAIL, "Not Clicked on Credit Offers");
+            Screenshot.errorScreenShot("Not Clicked on Credit Offers");
         }
     }
     /*
@@ -68,6 +71,7 @@ public class HomeDepotCreditOffersPage {
         try {
             helper.scrollByValue(0, 1000);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.applyNow, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Apply Now", test, HomeDepotCreditOffersPageLocator.applyNow);
             helper.clickOnElement(HomeDepotCreditOffersPageLocator.applyNow);
             // Assert.assertEquals(helper.getTitle(),excelData);
             LoggerHandler.info("Clicked on Apply Now");
@@ -75,6 +79,7 @@ public class HomeDepotCreditOffersPage {
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Apply Now");
             test.log(Status.FAIL, "Not Clicked on Apply Now");
+            Screenshot.errorScreenShot("Not Clicked on Apply Now");
         }
     }
     /*
@@ -172,6 +177,7 @@ public class HomeDepotCreditOffersPage {
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.continueContact, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Continue", test, HomeDepotCreditOffersPageLocator.continueContact);
             helper.clickOnElement(HomeDepotCreditOffersPageLocator.continueContact);
             Assert.assertEquals(helper.getTitle(),excelValue);
             LoggerHandler.info("Clicked on Continue");
@@ -179,6 +185,7 @@ public class HomeDepotCreditOffersPage {
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Continue");
             test.log(Status.FAIL, "Not Clicked on Continue");
+            Screenshot.errorScreenShot("Not Clicked on Continue");
         }
     }
     /*
@@ -276,6 +283,7 @@ public class HomeDepotCreditOffersPage {
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.continueReview, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicked on Continue", test, HomeDepotCreditOffersPageLocator.continueReview);
             helper.clickOnElement(HomeDepotCreditOffersPageLocator.continueReview);
             Assert.assertEquals(helper.getTitle(),excelValue);
             LoggerHandler.info("Clicked on Continue");
@@ -283,6 +291,7 @@ public class HomeDepotCreditOffersPage {
         } catch (Exception e) {
             LoggerHandler.error("Not Clicked on Continue");
             test.log(Status.FAIL, "Not Clicked on Continue");
+            Screenshot.errorScreenShot("Not Clicked on Continue");
         }
     }
     /*

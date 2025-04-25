@@ -9,6 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -49,6 +50,24 @@ public class WebDriverHelper {
         try {
             WebElement element = driver.findElement(locator);
             element.click();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /*
+     * a. Method Name: actionClick
+     * b. Author Name: Jaya vardhan Raju G
+     * c. Description: Clicks on an element
+     * d. Return Type: void
+     * e. Parameters:
+     *      - By locator: Locator to find the element on the page
+     */
+    public void actionClick(By locator) {
+        try {
+            WebElement element = driver.findElement(locator);
+            Actions actions = new Actions(driver);
+            actions.click(element).build().perform();
         } catch (Exception e) {
             e.printStackTrace();
         }

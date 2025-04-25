@@ -16,7 +16,7 @@ public class HomeDepotAboutUsFooterStep {
     }
     @When("I verify the Careers URL")
     public void i_verify_the_careers_url() {
-        // homeDepotAboutUsFooterPage.verifyUrlCareers();
+        homeDepotAboutUsFooterPage.verifyUrlCareers();
     }
     @When("I click on Corporate Information")
     public void i_click_on_corporate_information() {
@@ -24,7 +24,7 @@ public class HomeDepotAboutUsFooterStep {
     }
     @When("I verify the Corporate Information URL")
     public void i_verify_the_corporate_information_url() {
-        // homeDepotAboutUsFooterPage.verifyUrlCorporateInformation();
+        homeDepotAboutUsFooterPage.verifyUrlCorporateInformation();
     }
     @When("I click on Digital Newsroom")
     public void i_click_on_digital_newsroom() {
@@ -32,7 +32,7 @@ public class HomeDepotAboutUsFooterStep {
     }
     @When("I verify the Digital Newsroom URL")
     public void i_verify_the_digital_newsroom_url() {
-        // homeDepotAboutUsFooterPage.verifyUrlDigitalNewsroom();
+        homeDepotAboutUsFooterPage.verifyUrlDigitalNewsroom();
     }
     @When("I click on Home Depot Foundation")
     public void i_click_on_home_depot_foundation() {
@@ -40,7 +40,7 @@ public class HomeDepotAboutUsFooterStep {
     }
     @When("I verify the Home Depot Foundation URL")
     public void i_verify_the_home_depot_foundation_url() {
-        // homeDepotAboutUsFooterPage.verifyUrlHomeDepotFoundation();
+        homeDepotAboutUsFooterPage.verifyUrlHomeDepotFoundation();
     }
     @When("I click on Investor Relations")
     public void i_click_on_investor_relations() {
@@ -48,7 +48,7 @@ public class HomeDepotAboutUsFooterStep {
     }
     @When("I verify the Investor Relations URL")
     public void i_verify_the_investor_relations_url() {
-        // homeDepotAboutUsFooterPage.verifyUrlInvestorRelation();
+        homeDepotAboutUsFooterPage.verifyUrlInvestorRelation();
     }
     @When("I click on Government Customers")
     public void i_click_on_government_customers() {
@@ -56,7 +56,7 @@ public class HomeDepotAboutUsFooterStep {
     }
     @When("I verify the Government Customers URL")
     public void i_verify_the_government_customers_url() {
-        // homeDepotAboutUsFooterPage.verifyUrlGovernmentCustomers();
+        homeDepotAboutUsFooterPage.verifyUrlGovernmentCustomers();
     }
     @When("I click on Supplier Providers")
     public void i_click_on_supplier_providers() {
@@ -64,7 +64,7 @@ public class HomeDepotAboutUsFooterStep {
     }
     @When("I verify the Supplier Providers URL")
     public void i_verify_the_supplier_providers_url() {
-        // homeDepotAboutUsFooterPage.verifyUrlSupplierProviders();
+        homeDepotAboutUsFooterPage.verifyUrlSupplierProviders();
     }
     @When("I click on Affiliate Program")
     public void i_click_on_affiliate_program() {
@@ -72,7 +72,7 @@ public class HomeDepotAboutUsFooterStep {
     }
     @When("I verify the Affiliate Program URL")
     public void i_verify_the_affiliate_program_url() {
-        // homeDepotAboutUsFooterPage.verifyUrlAffiliateProgram();
+        homeDepotAboutUsFooterPage.verifyUrlAffiliateProgram();
     }
     @When("I click on Eco Actions")
     public void i_click_on_eco_actions() {

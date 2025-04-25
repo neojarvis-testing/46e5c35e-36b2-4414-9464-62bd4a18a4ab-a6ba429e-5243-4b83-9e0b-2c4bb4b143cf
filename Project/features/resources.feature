@@ -1,7 +1,6 @@
 
 Feature: Checking on the resources
     Scenario: Details of resources
-    Given Landed on the page.
     When I click on special and offers.
     When I verify savings center.
     When I click on military discount benefit.

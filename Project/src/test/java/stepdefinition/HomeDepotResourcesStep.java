@@ -2,7 +2,7 @@ package stepdefinition;
 
 import com.aventstack.extentreports.ExtentTest;
 
-import io.cucumber.java.en.Given;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.HomeDepotFooterResources;
@@ -12,10 +12,7 @@ public class HomeDepotResourcesStep {
     HomeDepotFooterResources homeDepotFooterResources = new HomeDepotFooterResources(test);
 
 
-    @Given("Landed on the page.")
-    public void landed_on_the_page() {
-
-    }
+    
     @When("I click on special and offers.")
     public void i_click_on_special_and_offers() {
     homeDepotFooterResources.clickOnSpecialsOffers();

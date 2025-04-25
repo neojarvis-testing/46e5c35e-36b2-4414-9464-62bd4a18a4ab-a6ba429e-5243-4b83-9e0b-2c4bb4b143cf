@@ -2,7 +2,7 @@ package stepdefinition;
 
 import com.aventstack.extentreports.ExtentTest;
 
-import io.cucumber.java.en.Given;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.HomeDepotFooterPageCustomerService;
@@ -12,9 +12,7 @@ public class HomeDepotFooterCustomerServiceStep {
     HomeDepotFooterPageCustomerService homeDepotFooterPageCustomerService = new HomeDepotFooterPageCustomerService(test);
 
 
-    @Given("I am on the page.")
-    public void i_am_on_the_page() {
-    }
+    
     @When("I click on check order status.")
     public void i_click_on_check_order_status() {
         homeDepotFooterPageCustomerService.clickOnCheckOrderStatus();

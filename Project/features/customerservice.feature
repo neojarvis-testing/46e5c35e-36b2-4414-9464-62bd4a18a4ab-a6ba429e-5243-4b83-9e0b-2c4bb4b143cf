@@ -1,6 +1,5 @@
 Feature: Checking on customer services
     Scenario: Checking the details
-    Given I am on the page.
     When I click on check order status.
     When I verify order status.
     When I click on pay your credit cart.

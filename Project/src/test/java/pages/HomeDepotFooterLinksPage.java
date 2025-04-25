@@ -272,23 +272,4 @@ public class HomeDepotFooterLinksPage {
             LoggerHandler.error("Cannot verify StoreDirectory");
         }
     }
-    public void footerLinksTestCase(){
-        clickOnStoreLocator();
-        verifyStoreLocator();
-        navigateBackToHome();
-        clickOnPrivacy();
-        verifyPrivacy();
-        navigateBackToHome();
-        clickOnTerm();
-        verifyTerms();
-        navigateBackToHome();
-        clickOnPreference();
-        verifyPreference();
-        navigateBackToHome();
-        clickOnSiteMap();
-        verifySiteMap();
-        navigateBackToHome();
-        clickOnStoreDirectory();
-        verifyStoreDirectory();
-    }
 }

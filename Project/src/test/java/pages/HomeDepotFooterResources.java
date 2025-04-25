@@ -229,7 +229,9 @@ public class HomeDepotFooterResources {
     public void verifyStorageOrganization() {
         try {
             String text = helper.getUrl();
+            System.out.println(text);
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Kushal.xlsx", "Sheet1",5 , 0);
+            System.out.println(expected);
             Assert.assertTrue(text.contains(expected));
             LoggerHandler.info("URL contains /b/Storage-Organization-Moving-Supplies/N-5yc1vZc89r");
             test.log(Status.INFO, "URL contains /b/Storage-Organization-Moving-Supplies/N-5yc1vZc89r");

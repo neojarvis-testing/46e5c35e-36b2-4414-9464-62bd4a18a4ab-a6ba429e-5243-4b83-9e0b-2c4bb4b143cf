@@ -60,9 +60,13 @@ public class HomeDepotResourcesStep {
     public void i_click_on_moving_supplies_and_rentals() {
     homeDepotFooterResources.clickOnMovingSuppliesAndRentals();
     }
+    @When("I verify organisation.")
+    public void i_verify_organisation() {
+        homeDepotFooterResources.verifyStorageOrganization();
+    }
     @When("I click on protection plans.")
     public void i_click_on_protection_plans() {
-    homeDepotFooterResources.verifyProtectionPlans();
+    homeDepotFooterResources.clickOnProtectionPlans();
     }
     @When("I verify protection plans.")
     public void i_verify_protection_plans() {

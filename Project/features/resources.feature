@@ -1,3 +1,4 @@
+
 Feature: Checking on the resources
     Scenario: Details of resources
     Given Landed on the page.
@@ -12,7 +13,7 @@ Feature: Checking on the resources
     When I click on installation and services.
     When I verify services.
     When I click on moving supplies and rentals.
-    When I verify services.
+    When I verify organisation.
     When I click on protection plans.
     When I verify protection plans.
     When I click on rebate center.

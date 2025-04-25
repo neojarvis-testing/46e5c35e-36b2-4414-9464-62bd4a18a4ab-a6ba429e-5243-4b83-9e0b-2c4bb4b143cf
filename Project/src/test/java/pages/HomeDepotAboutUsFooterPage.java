@@ -361,31 +361,4 @@ public class HomeDepotAboutUsFooterPage {
             test.log(Status.FAIL, "Not Verified url for Eco Actions - "+excelData);
         }
     }
-    /*
-    * a. Method Name: aboutUsFooterFlow
-    * b. Author Name: Vansh Vijay
-    * c. Description: This method executes a sequence of actions to test the 'About Us' section links in the footer. It clicks each link and verifies its corresponding URL.
-    * d. Return Type: void
-    * e. Parameters: none
-    */
-    public void aboutUsFooterTestCase(){
-        clickOnCareers();
-        verifyUrlCareers();
-        clickOnCorporateInformation();
-        verifyUrlCorporateInformation();
-        clickOnDigitalNewsroom();
-        verifyUrlDigitalNewsroom();
-        clickOnHomeDepotFoundation();
-        verifyUrlHomeDepotFoundation();
-        clickOnInvestorRelation();
-        verifyUrlInvestorRelation();
-        clickOnGovernmentCustomers();
-        verifyUrlGovernmentCustomers();
-        clickOnSupplierProviders();
-        verifyUrlSupplierProviders();
-        clickOnAffiliateProgram();
-        verifyUrlAffiliateProgram();
-        clickOnEcoActions();
-        verifyUrlEcoActions();
-    }
 }

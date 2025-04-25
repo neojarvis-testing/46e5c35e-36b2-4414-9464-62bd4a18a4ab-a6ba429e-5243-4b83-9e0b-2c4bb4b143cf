@@ -64,7 +64,7 @@ public class HomeDepotCreditOffersPage {
     * e. Parameters: none
     */
     public void clickOnApplyNow(){
-        String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
+        // String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
             helper.scrollByValue(0, 1000);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.applyNow, 10);
@@ -85,7 +85,7 @@ public class HomeDepotCreditOffersPage {
     * e. Parameters: none
     */
     public void sendDataForFirstName(){
-        String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
+        // String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
             String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 0, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.firstName, 10);
@@ -350,31 +350,4 @@ public class HomeDepotCreditOffersPage {
             test.log(Status.FAIL, "Data not inserted for Total Income");
         }
     }
-    /*
-    * a. Method Name: creditOffersFlow
-    * b. Author Name: Vansh Vijay
-    * c. Description: This method orchestrates the entire user flow for applying for Home Depot credit offers. It navigates to the offers page, verifies text, clicks 'Apply Now', fills in personal, contact, address, and financial information from Excel, and proceeds through the application steps by clicking 'Continue' buttons.
-    * d. Return Type: void
-    * e. Parameters: none
-    */
-    public void creditOffersTestCase(){
-        clickOnCreditOffers();
-        verifyTextForCreditOffers();
-        clickOnApplyNow();
-        sendDataForFirstName();
-        sendDataForLastName();
-        sendDataForEmailAddress();
-        sendDataForMobileNumber();
-        clickOnContinueContact();
-        clickOnContinueContact();
-        sendDataForStreetAddress();
-        sendDataForCity();
-        sendDataForState();
-        sendDataForZipCode();
-        clickOnContinueReview();
-        sendDataForResidentialStatus();
-        sendDataForMonthlyIncome();
-        sendDataForAnnualIncome();
-        clickOnContinueReview();
-    }
-}
+   }

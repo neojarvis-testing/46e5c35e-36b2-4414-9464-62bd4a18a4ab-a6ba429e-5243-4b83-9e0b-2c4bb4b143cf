@@ -15,7 +15,7 @@ import utils.TriggerReport;
 
 public class Hooks extends Base {
     static ExtentReports reports;
-	static String timestamp;
+    static String timestamp;
 	
     /*
      * a. Method Name: openReport

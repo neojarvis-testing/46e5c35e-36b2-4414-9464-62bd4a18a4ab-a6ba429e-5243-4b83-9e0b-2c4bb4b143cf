@@ -51,10 +51,10 @@ public class Reporter extends Base {
     public static String captureScreenShot(String filename){
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String name = filename + "_" + timestamp + ".png";
-        String destPath = System.getProperty("user.dir") + "/reports/reportScreenshots/" +name;
-        ts = (TakesScreenshot)driver;
+        String destPath = "./"+name;
+        ts = (TakesScreenshot) driver;
         File file = ts.getScreenshotAs(OutputType.FILE);
-        File screenshotsDir = new File(System.getProperty("user.dir")+"/reports/reportScreenshots");
+        File screenshotsDir = new File (System.getProperty("user.dir")+"/reports");
         if(!screenshotsDir.exists()){
             screenshotsDir.mkdirs();
         }
@@ -102,10 +102,10 @@ public class Reporter extends Base {
            
             String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
             String name = filename + "_" + timestamp + ".png";
-            String destPath = System.getProperty("user.dir") + "/screenshots/highlightedScreenshots/" +name;
+            String destPath = "./"+name;
             ts = (TakesScreenshot) driver;
             File file = ts.getScreenshotAs(OutputType.FILE);
-            File screenshotsDir = new File(System.getProperty("user.dir")+"/screenshots/highlightedScreenshots");
+            File screenshotsDir = new File (System.getProperty("user.dir")+"/reports");
             if(!screenshotsDir.exists()){
                 screenshotsDir.mkdirs();
             }

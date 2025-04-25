@@ -429,15 +429,4 @@ public class HomeDepotDIYWorkShopPage {
             test.log(Status.FAIL, "Unable to verify the Text RESOURCES");
         }
     }
-
-    public void homeDepotDIYWorkShopPageTestCase(){
-        clickOnDIYIcon();
-        clickOnFreeWorkShops();
-        verifyFreeWorkShopsText();
-        clickOnKidsWorkShops();
-        verifyKidsWorkShopsText();
-        // clickOnLearnMore();
-        clickOnRegisterNow();
-        clickOnRegisterSubmitButton();
-    }
 }

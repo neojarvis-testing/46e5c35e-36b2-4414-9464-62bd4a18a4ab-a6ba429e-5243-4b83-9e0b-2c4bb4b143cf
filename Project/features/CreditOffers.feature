@@ -1,4 +1,3 @@
-@a
 Feature: Apply for Credit Offers
 
   Scenario: Complete the Credit Offers Application

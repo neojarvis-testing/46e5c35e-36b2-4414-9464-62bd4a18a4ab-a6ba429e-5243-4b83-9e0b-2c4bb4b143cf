@@ -42,7 +42,7 @@ public class Reporter extends Base {
         return report;
     }
 
-    /* a. Method Name: CaptureScreenShot
+    /* a. Method Name: captureScreenShot
      * b. Author Name: Kushal
      * c. Description: This method captures the screenshot.
      * d. Return Type: String

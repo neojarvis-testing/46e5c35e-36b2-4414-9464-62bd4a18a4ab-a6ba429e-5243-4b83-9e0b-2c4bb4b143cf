@@ -5,8 +5,11 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -17,8 +20,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.google.common.io.Files;
 
 
-public class Reporter extends Base{
-    public static TakesScreenshot ts;
+public class Reporter extends Base {
+   public static TakesScreenshot ts;
     public static ExtentReports report;
     public static ExtentTest test;
     public static ExtentSparkReporter spark;
@@ -48,10 +51,13 @@ public class Reporter extends Base{
     public static String captureScreenShot(String filename){
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String name = filename + "_" + timestamp + ".png";
-        String destPath = "./"+name;
+        String destPath = System.getProperty("user.dir") + "/reports/reportScreenshots/" +name;
         ts = (TakesScreenshot)driver;
         File file = ts.getScreenshotAs(OutputType.FILE);
-        File screenshotsDir = new File(System.getProperty("user.dir")+"/reports");
+        File screenshotsDir = new File(System.getProperty("user.dir")+"/reports/reportScreenshots");
+        if(!screenshotsDir.exists()){
+            screenshotsDir.mkdirs();
+        }
         File target = new File(screenshotsDir, name);
         try{
             Files.copy(file, target);
@@ -72,6 +78,63 @@ public class Reporter extends Base{
         try {
             String screenshotPath = captureScreenShot(filename);
             test.log(Status.INFO, description, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
+    /*
+     * a. Method Name: captureHighlightScreenShot
+     * b. Author Name: Sri Ramya Paladi
+     * c. Description: Highlights a web element and captures a screenshot.
+     * d. Return Type: void
+     * e. Parameters: 
+     *      - String filename: The name used to save the screenshot file
+     *      - By locator: locator to find the element on the page.
+     */
+    public static String captureHighlightScreenShot(String filename, By locator) {
+        try {
+            WebElement element = driver.findElement(locator);
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+
+            js.executeScript("arguments[0].style.backgroundColor='yellow';", element);
+           
+            String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+            String name = filename + "_" + timestamp + ".png";
+            String destPath = System.getProperty("user.dir") + "/screenshots/highlightedScreenshots/" +name;
+            ts = (TakesScreenshot) driver;
+            File file = ts.getScreenshotAs(OutputType.FILE);
+            File screenshotsDir = new File(System.getProperty("user.dir")+"/screenshots/highlightedScreenshots");
+            if(!screenshotsDir.exists()){
+                screenshotsDir.mkdirs();
+            }
+            File target = new File(screenshotsDir, name);
+            try {
+                Files.copy(file, target);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            
+            js.executeScript("arguments[0].style.backgroundColor='';", element);
+            
+            return destPath;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    /* a. Method Name: attachHighlightedScreenshotToReport
+     * b. Author Name: Jaya vardhan Raju G
+     * c. Description: This method attaches the screenshot to the report.
+     * d. Return Type: void
+     * e. Parameters: filename, Extent test, description.
+     */
+    public static void attachHighlightedScreenshotToReport(String filename, ExtentTest test, By locator){
+        try {
+            String screenshotPath = captureHighlightScreenShot(filename, locator);
+            test.log(Status.INFO, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.junit.Test;
-
 import com.aventstack.extentreports.ExtentReports;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;

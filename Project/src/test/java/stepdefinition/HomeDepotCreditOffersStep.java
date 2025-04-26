@@ -16,27 +16,27 @@ public class HomeDepotCreditOffersStep {
     }
     @When("I verify the text for Credit Offers")
     public void i_verify_the_text_for_credit_offers() {
-        // homeDepotCreditOffersPage.verifyTextForCreditOffers();
+        homeDepotCreditOffersPage.verifyTextForCreditOffers();
     }
     @When("I click on Apply Now")
     public void i_click_on_apply_now() {
         homeDepotCreditOffersPage.clickOnApplyNow();
     }
-    @When("I send data for the First Name")
-    public void i_send_data_for_the_first_name() {
-        homeDepotCreditOffersPage.sendDataForFirstName();
+    @When("I send data for the First Name {string}")
+    public void i_send_data_for_the_first_name(String string) {
+        homeDepotCreditOffersPage.sendDataForFirstName(string);
     }
-    @When("I send data for the Last Name")
-    public void i_send_data_for_the_last_name() {
-        homeDepotCreditOffersPage.sendDataForLastName();
+    @When("I send data for the Last Name {string}")
+    public void i_send_data_for_the_last_name(String string) {
+        homeDepotCreditOffersPage.sendDataForLastName(string);
     }
-    @When("I send data for the Email Address")
-    public void i_send_data_for_the_email_address() {
-        homeDepotCreditOffersPage.sendDataForEmailAddress();
+    @When("I send data for the Email Address {string}")
+    public void i_send_data_for_the_email_address(String string) {
+        homeDepotCreditOffersPage.sendDataForEmailAddress(string);
     }
-    @When("I send data for the Mobile Number")
-    public void i_send_data_for_the_mobile_number() {
-        homeDepotCreditOffersPage.sendDataForMobileNumber();
+    @When("I send data for the Mobile Number {string}")
+    public void i_send_data_for_the_mobile_number(String string) {
+        homeDepotCreditOffersPage.sendDataForMobileNumber(string);
     }
     @When("I click on Continue Contact")
     public void i_click_on_continue_contact() {
@@ -46,37 +46,37 @@ public class HomeDepotCreditOffersStep {
     public void i_click_on_continue_contact_again() {
         homeDepotCreditOffersPage.clickOnContinueContact();
     }
-    @When("I send data for the Street Address")
-    public void i_send_data_for_the_street_address() {
-        homeDepotCreditOffersPage.sendDataForStreetAddress();
+    @When("I send data for the Street Address {string}")
+    public void i_send_data_for_the_street_address(String string) {
+        homeDepotCreditOffersPage.sendDataForStreetAddress(string);
     }
-    @When("I send data for the City")
-    public void i_send_data_for_the_city() {
-        homeDepotCreditOffersPage.sendDataForCity();
+    @When("I send data for the City {string}")
+    public void i_send_data_for_the_city(String string) {
+        homeDepotCreditOffersPage.sendDataForCity(string);
     }
-    @When("I send data for the State")
-    public void i_send_data_for_the_state() {
-        homeDepotCreditOffersPage.sendDataForState();
+    @When("I send data for the State {string}")
+    public void i_send_data_for_the_state(String string) {
+        homeDepotCreditOffersPage.sendDataForState(string);
     }
-    @When("I send data for the Zip Code")
-    public void i_send_data_for_the_zip_code() {
-        homeDepotCreditOffersPage.sendDataForZipCode();
+    @When("I send data for the Zip Code {string}")
+    public void i_send_data_for_the_zip_code(String string) {
+        homeDepotCreditOffersPage.sendDataForZipCode(string);
     }
     @When("I click on Continue Review")
     public void i_click_on_continue_review() {
         homeDepotCreditOffersPage.clickOnContinueReview();
     }
-    @When("I send data for the Residential Status")
-    public void i_send_data_for_the_residential_status() {
-        homeDepotCreditOffersPage.sendDataForResidentialStatus();
+    @When("I send data for the Residential Status {string}")
+    public void i_send_data_for_the_residential_status(String string) {
+        homeDepotCreditOffersPage.sendDataForResidentialStatus(string);
     }
-    @When("I send data for the Monthly Income")
-    public void i_send_data_for_the_monthly_income() {
-        homeDepotCreditOffersPage.sendDataForMonthlyIncome();
+    @When("I send data for the Monthly Income {string}")
+    public void i_send_data_for_the_monthly_income(String string) {
+        homeDepotCreditOffersPage.sendDataForMonthlyIncome(string);
     }
-    @When("I send data for the Annual Income")
-    public void i_send_data_for_the_annual_income() {
-        homeDepotCreditOffersPage.sendDataForAnnualIncome();
+    @When("I send data for the Annual Income {string}")
+    public void i_send_data_for_the_annual_income(String string) {
+        homeDepotCreditOffersPage.sendDataForAnnualIncome(string);
     }
     @Then("I click on Continue Review again")
     public void i_click_on_continue_review_again() {

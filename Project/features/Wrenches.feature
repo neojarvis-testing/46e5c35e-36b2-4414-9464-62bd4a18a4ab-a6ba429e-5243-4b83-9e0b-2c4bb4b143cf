@@ -1,10 +1,10 @@
 @b
 Feature: Category of Wrench Set Types
 
-    Scenario: Explore Different Types of Wrenches
+    Scenario Outline: Explore Different Types of Wrenches
 
-        When I click On Search Input Bar  
-        And I enter Value On Input Bar  
+        When I click On Search Input Bar
+        And I enter Value On Input Bar "wrench"
         And I click On Search Icon  
         And I verify Wrench Label  
         And I click On Category First Time  

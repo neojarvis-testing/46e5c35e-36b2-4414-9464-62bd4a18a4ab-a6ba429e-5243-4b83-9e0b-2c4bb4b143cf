@@ -67,13 +67,11 @@ public class HomeDepotCreditOffersPage {
     * e. Parameters: none
     */
     public void clickOnApplyNow(){
-        // String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
             helper.scrollByValue(0, 1000);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.applyNow, 10);
             Reporter.attachHighlightedScreenshotToReport("Clicked on Apply Now", test, HomeDepotCreditOffersPageLocator.applyNow);
             helper.clickOnElement(HomeDepotCreditOffersPageLocator.applyNow);
-            // Assert.assertEquals(helper.getTitle(),excelData);
             LoggerHandler.info("Clicked on Apply Now");
             test.log(Status.PASS, "Clicked on Apply Now");
         } catch (Exception e) {
@@ -89,13 +87,10 @@ public class HomeDepotCreditOffersPage {
     * d. Return Type: void
     * e. Parameters: none
     */
-    public void sendDataForFirstName(){
-        // String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
+    public void sendDataForFirstName(String value){
         try {
-            String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 0, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.firstName, 10);
-            helper.sendData(HomeDepotCreditOffersPageLocator.firstName,excelData);
-            // Assert.assertEquals(helper.getTitle(),excelValue);
+            helper.sendData(HomeDepotCreditOffersPageLocator.firstName,value);
             LoggerHandler.info("Data inserted for First Name");
             test.log(Status.PASS, "Data inserted for First Name");
         } catch (Exception e) {
@@ -110,12 +105,11 @@ public class HomeDepotCreditOffersPage {
     * d. Return Type: void
     * e. Parameters: none
     */
-    public void sendDataForLastName(){
+    public void sendDataForLastName(String value){
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 2, 3);
         try {
-            String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.lastName, 10);
-            helper.sendData(HomeDepotCreditOffersPageLocator.lastName,excelData);
+            helper.sendData(HomeDepotCreditOffersPageLocator.lastName,value);
             Assert.assertEquals(helper.getUrl(),excelValue);
             LoggerHandler.info("Data inserted for Last Name");
             test.log(Status.PASS, "Data inserted for Last Name");
@@ -131,12 +125,11 @@ public class HomeDepotCreditOffersPage {
     * d. Return Type: void
     * e. Parameters: none
     */
-    public void sendDataForEmailAddress(){
+    public void sendDataForEmailAddress(String value){
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
-            String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 2, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.email, 10);
-            helper.sendData(HomeDepotCreditOffersPageLocator.email,excelData);
+            helper.sendData(HomeDepotCreditOffersPageLocator.email,value);
             Assert.assertEquals(helper.getTitle(),excelValue);
             LoggerHandler.info("Data inserted for Email Address");
             test.log(Status.PASS, "Data inserted for Email Address");
@@ -152,12 +145,11 @@ public class HomeDepotCreditOffersPage {
     * d. Return Type: void
     * e. Parameters: none
     */
-    public void sendDataForMobileNumber(){
+    public void sendDataForMobileNumber(String value){
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
-            String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 3, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.phoneNumber, 10);
-            helper.sendData(HomeDepotCreditOffersPageLocator.phoneNumber,excelData);
+            helper.sendData(HomeDepotCreditOffersPageLocator.phoneNumber,value);
             Assert.assertEquals(helper.getTitle(),excelValue);
             LoggerHandler.info("Data inserted for Mobile Number");
             test.log(Status.PASS, "Data inserted for Mobile Number");
@@ -195,12 +187,11 @@ public class HomeDepotCreditOffersPage {
     * d. Return Type: void
     * e. Parameters: none
     */
-    public void sendDataForStreetAddress(){
+    public void sendDataForStreetAddress(String value){
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
-            String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 4, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.streetAddress, 10);
-            helper.sendData(HomeDepotCreditOffersPageLocator.streetAddress,excelData);
+            helper.sendData(HomeDepotCreditOffersPageLocator.streetAddress,value);
             Assert.assertEquals(helper.getTitle(),excelValue);
             LoggerHandler.info("Data inserted for Street Address");
             test.log(Status.PASS, "Data inserted for Street Address");
@@ -216,12 +207,11 @@ public class HomeDepotCreditOffersPage {
     * d. Return Type: void
     * e. Parameters: none
     */
-    public void sendDataForCity(){
+    public void sendDataForCity(String value){
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
-            String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 5, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.city, 10);
-            helper.sendData(HomeDepotCreditOffersPageLocator.city,excelData);
+            helper.sendData(HomeDepotCreditOffersPageLocator.city,value);
             Assert.assertEquals(helper.getTitle(),excelValue);
             LoggerHandler.info("Data inserted for City");
             test.log(Status.PASS, "Data inserted for City");
@@ -237,12 +227,11 @@ public class HomeDepotCreditOffersPage {
     * d. Return Type: void
     * e. Parameters: none
     */
-    public void sendDataForState(){
+    public void sendDataForState(String value){
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
-            String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 6, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.state, 10);
-            helper.selectFromDropdown(HomeDepotCreditOffersPageLocator.state,excelData);
+            helper.selectFromDropdown(HomeDepotCreditOffersPageLocator.state,value);
             Assert.assertEquals(helper.getTitle(),excelValue);
             LoggerHandler.info("Data inserted for State");
             test.log(Status.PASS, "Data inserted for State");
@@ -258,12 +247,11 @@ public class HomeDepotCreditOffersPage {
     * d. Return Type: void
     * e. Parameters: none
     */
-    public void sendDataForZipCode(){
+    public void sendDataForZipCode(String value){
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
-            String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 7, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.zipCode, 10);
-            helper.sendData(HomeDepotCreditOffersPageLocator.zipCode,excelData);
+            helper.sendData(HomeDepotCreditOffersPageLocator.zipCode,value);
             Assert.assertEquals(helper.getTitle(),excelValue);
             LoggerHandler.info("Data inserted for Zip Code");
             test.log(Status.PASS, "Data inserted for Zip Code");
@@ -301,12 +289,11 @@ public class HomeDepotCreditOffersPage {
     * d. Return Type: void
     * e. Parameters: none
     */
-    public void sendDataForResidentialStatus(){
+    public void sendDataForResidentialStatus(String value){
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
-            String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 8, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.residentialStatus, 10);
-            helper.selectFromDropdown(HomeDepotCreditOffersPageLocator.residentialStatus,excelData);
+            helper.selectFromDropdown(HomeDepotCreditOffersPageLocator.residentialStatus,value);
             Assert.assertEquals(helper.getTitle(),excelValue);
             LoggerHandler.info("Data inserted for Residential Status");
             test.log(Status.PASS, "Data inserted for Residential Status");
@@ -322,12 +309,11 @@ public class HomeDepotCreditOffersPage {
     * d. Return Type: void
     * e. Parameters: none
     */
-    public void sendDataForMonthlyIncome(){
+    public void sendDataForMonthlyIncome(String value){
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
-            String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 9, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.monthlyIncome, 10);
-            helper.sendData(HomeDepotCreditOffersPageLocator.monthlyIncome,excelData);
+            helper.sendData(HomeDepotCreditOffersPageLocator.monthlyIncome,value);
             Assert.assertEquals(helper.getTitle(),excelValue);
             LoggerHandler.info("Data inserted for Monthly Income");
             test.log(Status.PASS, "Data inserted for Monthly Income");
@@ -343,13 +329,11 @@ public class HomeDepotCreditOffersPage {
     * d. Return Type: void
     * e. Parameters: none
     */
-    public void sendDataForAnnualIncome(){
+    public void sendDataForAnnualIncome(String value){
         String excelValue = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 1, 3);
         try {
-            String excelData = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Excel.xlsx", "Vansh", 10, 0);
             helper.waitForElementToBeVisible(HomeDepotCreditOffersPageLocator.totalIncome, 10);
-            helper.sendData(HomeDepotCreditOffersPageLocator.totalIncome,excelData);
-            // Thread.sleep(2000);
+            helper.sendData(HomeDepotCreditOffersPageLocator.totalIncome,value);
             Screenshot.captureScreenShot("Annual Income");
             Assert.assertEquals(helper.getTitle(),excelValue);
             LoggerHandler.info("Data inserted for Total Income");

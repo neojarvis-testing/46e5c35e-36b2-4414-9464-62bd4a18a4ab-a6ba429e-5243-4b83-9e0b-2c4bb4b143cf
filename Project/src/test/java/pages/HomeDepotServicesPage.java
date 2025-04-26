@@ -31,6 +31,7 @@ public class HomeDepotServicesPage {
     public void clickOnServicesIcon(){
         try {
             helper.waitForElementToBeVisible(HomeDepotServicesPageLocator.serviceIcon, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicking Service Icon", test, HomeDepotServicesPageLocator.serviceIcon);
             helper.clickOnElement(HomeDepotServicesPageLocator.serviceIcon);
             String actual = helper.getText(HomeDepotServicesPageLocator.serviceIcon);
             String expected = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "Sheet1", 0, 0);
@@ -40,6 +41,7 @@ public class HomeDepotServicesPage {
         } catch (Exception e) {
             LoggerHandler.error("User not able to Click on Service Icon");
             test.log(Status.FAIL, "User not able to Click on Service Icon");
+            Screenshot.errorScreenShot("Error Clicking Service Icon");
         }
     }
 
@@ -55,7 +57,7 @@ public class HomeDepotServicesPage {
             String actual = helper.getText(HomeDepotServicesPageLocator.services);
             String expected  = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "Sheet1", 0, 0);
             Assert.assertEquals(actual, expected);
-            LoggerHandler.info("Verified the TextServices");
+            LoggerHandler.info("Verified the Text Services");
             test.log(Status.PASS, "Verified the Text Services");
         } catch (Exception e) {
             LoggerHandler.error("Unable to verify the Text Services");
@@ -73,6 +75,7 @@ public class HomeDepotServicesPage {
     public void clickOnInstallation(){
         try {
             helper.waitForElementToBeVisible(HomeDepotServicesPageLocator.installation, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicking Installation", test, HomeDepotServicesPageLocator.installation);
             helper.clickOnElement(HomeDepotServicesPageLocator.installation);
             String actual = helper.getText(HomeDepotServicesPageLocator.installation);
             String expected = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "Sheet1", 1, 0);
@@ -82,9 +85,10 @@ public class HomeDepotServicesPage {
         } catch (Exception e) {
             LoggerHandler.error("User not able to Click on Installation & Services");
             test.log(Status.FAIL, "User not able to Click on Installation & Services");
+            Screenshot.errorScreenShot("Error Clicking Installation & Services");
         }
     }
-
+    
     /*
      * a. Method Name: clickOnViewAllInstallation
      * b. Author Name: Sri Ramya Paladi
@@ -95,6 +99,7 @@ public class HomeDepotServicesPage {
     public void clickOnViewAllInstallation(){
         try {
             helper.waitForElementToBeVisible(HomeDepotServicesPageLocator.viewAllInstallation, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicking View All Installation", test, HomeDepotServicesPageLocator.viewAllInstallation);
             helper.clickOnElement(HomeDepotServicesPageLocator.viewAllInstallation);
             String actual = helper.getText(HomeDepotServicesPageLocator.viewAllInstallation);
             String expected = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "Sheet1", 2, 0);
@@ -104,8 +109,9 @@ public class HomeDepotServicesPage {
         } catch (Exception e) {
             LoggerHandler.error("User not able to Click on View All Installation & Services");
             test.log(Status.FAIL, "User not able to Click on View All Installation & Services");
+            Screenshot.errorScreenShot("Error Clicking View All Installation & Services");
         }
-    }
+    }    
 
     /*
      * a. Method Name: verifyHomeServicesText
@@ -137,17 +143,20 @@ public class HomeDepotServicesPage {
     public void clickOnFlooring(){
         try {
             helper.waitForElementToBeVisible(HomeDepotServicesPageLocator.flooring, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicking Flooring", test, HomeDepotServicesPageLocator.flooring);
             helper.clickOnElement(HomeDepotServicesPageLocator.flooring);
             String actual = helper.getText(HomeDepotServicesPageLocator.flooring);
             String expected = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "Sheet1", 3, 0);
-            Assert.assertEquals(actual,expected);
+            Assert.assertEquals(actual, expected);
             LoggerHandler.info("User Clicked on Flooring");
             test.log(Status.PASS, "User Clicked on Flooring");
         } catch (Exception e) {
             LoggerHandler.error("User not able to Click on Flooring");
             test.log(Status.FAIL, "User not able to Click on Flooring");
+            Screenshot.errorScreenShot("Error Clicking Flooring");
         }
     }
+    
     
     /*
      * a. Method Name: verifyFlooringText
@@ -179,17 +188,20 @@ public class HomeDepotServicesPage {
     public void clickOnBathroom(){
         try {
             helper.waitForElementToBeVisible(HomeDepotServicesPageLocator.bathroom, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicking Bathroom", test, HomeDepotServicesPageLocator.bathroom);
             helper.clickOnElement(HomeDepotServicesPageLocator.bathroom);
             String actual = helper.getText(HomeDepotServicesPageLocator.bathroom);
             String expected = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "Sheet1", 4, 0);
-            Assert.assertEquals(actual,expected);
+            Assert.assertEquals(actual, expected);
             LoggerHandler.info("User Clicked on Bathroom");
             test.log(Status.PASS, "User Clicked on Bathroom");
         } catch (Exception e) {
             LoggerHandler.error("User not able to Click on Bathroom");
             test.log(Status.FAIL, "User not able to Click on Bathroom");
+            Screenshot.errorScreenShot("Error Clicking Bathroom");
         }
     }
+    
 
     /*
      * a. Method Name: verifyBathroomText
@@ -222,18 +234,20 @@ public class HomeDepotServicesPage {
     public void clickOnDoorsAndWindows(){
         try {
             helper.waitForElementToBeVisible(HomeDepotServicesPageLocator.doorsWindows, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicking Doors & Windows", test, HomeDepotServicesPageLocator.doorsWindows);
             helper.clickOnElement(HomeDepotServicesPageLocator.doorsWindows);
             String actual = helper.getText(HomeDepotServicesPageLocator.doorsWindows);
             String expected = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "Sheet1", 5, 0);
-            Assert.assertEquals(actual,expected);
+            Assert.assertEquals(actual, expected);
             LoggerHandler.info("User Clicked on Doors & Windows");
             test.log(Status.PASS, "User Clicked on Doors & Windows");
         } catch (Exception e) {
             LoggerHandler.error("User not able to Click on Doors & Windows");
             test.log(Status.FAIL, "User not able to Click on Doors & Windows");
+            Screenshot.errorScreenShot("Error Clicking Doors & Windows");
         }
     }
-
+    
     /*
      * a. Method Name: verifyWindowServicesText
      * b. Author Name: Sri Ramya Paladi
@@ -265,17 +279,19 @@ public class HomeDepotServicesPage {
     public void clickOnHeating(){
         try {
             helper.waitForElementToBeVisible(HomeDepotServicesPageLocator.heating, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicking Heating & Cooling", test, HomeDepotServicesPageLocator.heating);
             helper.clickOnElement(HomeDepotServicesPageLocator.heating);
             String actual = helper.getText(HomeDepotServicesPageLocator.heating);
             String expected = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "Sheet1", 6, 0);
-            Assert.assertEquals(actual,expected);
+            Assert.assertEquals(actual, expected);
             LoggerHandler.info("User Clicked on Heating & Cooling");
             test.log(Status.PASS, "User Clicked on Heating & Cooling");
         } catch (Exception e) {
             LoggerHandler.error("User not able to Click on Heating & Cooling");
             test.log(Status.FAIL, "User not able to Click on Heating & Cooling");
+            Screenshot.errorScreenShot("Error Clicking Heating & Cooling");
         }
-    }
+    }    
 
     /*
      * a. Method Name: verifyHeatingText
@@ -308,15 +324,34 @@ public class HomeDepotServicesPage {
     public void navigateBackToPreviousPage(){
         try{
             helper.navigateBack();
-            Thread.sleep(3000);
             Screenshot.captureScreenShot("Screenshot Captured");
             Reporter.attachScreenshotToReport("Test Screenshot", test, "Capture and stored in report");
             LoggerHandler.info("Navigated back to Previous Page");
             test.log(Status.PASS, "Navigated back to Previous Page");
-        }catch(InterruptedException e){
+        }catch(Exception e){
             e.printStackTrace();
             LoggerHandler.error("Not able to Navigate back to Previous Page");
             test.log(Status.FAIL, "Not able to Navigate back to Previous Page");
         }
+    }
+
+    public void homeDepotServicesPageTestCase(){
+            clickOnServicesIcon();
+            verifyServicesText();
+            clickOnInstallation();
+            clickOnViewAllInstallation();
+            verifyHomeServicesText();
+            clickOnFlooring();
+            verifyFlooringText();
+            navigateBackToPreviousPage();
+            clickOnBathroom();
+            verifyBathroomText();
+            navigateBackToPreviousPage();
+            clickOnDoorsAndWindows();
+            verifyWindowServicesText();
+            navigateBackToPreviousPage();
+            clickOnHeating();
+            verifyHeatingText();
+            navigateBackToPreviousPage();
     }
 }

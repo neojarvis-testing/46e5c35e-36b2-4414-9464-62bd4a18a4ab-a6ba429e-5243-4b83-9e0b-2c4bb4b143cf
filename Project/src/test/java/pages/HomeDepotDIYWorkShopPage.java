@@ -1,7 +1,5 @@
 package pages;
 
-
-
 import org.junit.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -11,6 +9,8 @@ import uistore.HomeDepotDIYWorkShopPageLocator;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
+import utils.Reporter;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class HomeDepotDIYWorkShopPage {
@@ -31,17 +31,20 @@ public class HomeDepotDIYWorkShopPage {
     public void clickOnDIYIcon(){
         try {
             helper.waitForElementToBeVisible(HomeDepotDIYWorkShopPageLocator.diyIcon, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicking DIY Icon", test, HomeDepotDIYWorkShopPageLocator.diyIcon);
             helper.clickOnElement(HomeDepotDIYWorkShopPageLocator.diyIcon);
             String actual = helper.getText(HomeDepotDIYWorkShopPageLocator.diyIcon);
             String expected = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "sheet5", 0, 0);
-            Assert.assertEquals(actual,expected);
+            Assert.assertEquals(actual, expected);
             LoggerHandler.info("Clicked on DIY Icon");
-            test.log(Status.PASS,"Clicked on DIY Icon");
+            test.log(Status.PASS, "Clicked on DIY Icon");
         } catch (Exception e) {
             LoggerHandler.error("Not able to click on DIY Icon");
-            test.log(Status.FAIL,"Not able to click on DIY Icon");
+            test.log(Status.FAIL, "Not able to click on DIY Icon");
+            Screenshot.errorScreenShot("Error Clicking DIY Icon");
         }
     }
+
 
     /*
      * a. Method Name: clickOnFreeWorkShops
@@ -53,18 +56,20 @@ public class HomeDepotDIYWorkShopPage {
     public void clickOnFreeWorkShops(){
         try {
             helper.waitForElementToBeVisible(HomeDepotDIYWorkShopPageLocator.freeWorkShop, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicking Free Workshops", test, HomeDepotDIYWorkShopPageLocator.freeWorkShop);
             helper.clickOnElement(HomeDepotDIYWorkShopPageLocator.freeWorkShop);
             String actual = helper.getText(HomeDepotDIYWorkShopPageLocator.freeWorkShop);
             String expected = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "sheet5", 1, 0);
             Assert.assertTrue(actual.contains(expected));
-            LoggerHandler.info("Clicked on Free WorkShops");
-            test.log(Status.PASS,"Clicked on Free WorkShops");
+            LoggerHandler.info("Clicked on Free Workshops");
+            test.log(Status.PASS, "Clicked on Free Workshops");
         } catch (Exception e) {
-            LoggerHandler.error("Not able to click on Free WorkShops");
-            test.log(Status.FAIL,"Not able to click on Free WorkShops");
+            LoggerHandler.error("Not able to click on Free Workshops");
+            test.log(Status.FAIL, "Not able to click on Free Workshops");
+            Screenshot.errorScreenShot("Error Clicking Free Workshops");
         }
     }
-
+    
     /*
      * a. Method Name: verifyFreeWorkShopsText
      * b. Author Name: Sri Ramya Paladi
@@ -96,18 +101,20 @@ public class HomeDepotDIYWorkShopPage {
     public void clickOnKidsWorkShops(){
         try {
             helper.waitForElementToBeVisible(HomeDepotDIYWorkShopPageLocator.kidsWorkShop, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicking Kids Workshops", test, HomeDepotDIYWorkShopPageLocator.kidsWorkShop);
             helper.clickOnElement(HomeDepotDIYWorkShopPageLocator.kidsWorkShop);
             String actual = helper.getText(HomeDepotDIYWorkShopPageLocator.kidsWorkShop);
             String expected  = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "sheet5", 2, 0);
             Assert.assertEquals(actual, expected);
             LoggerHandler.info("Clicked on Kids Workshops");
-            test.log(Status.PASS,"Clicked on Kids Workshops");
+            test.log(Status.PASS, "Clicked on Kids Workshops");
         } catch (Exception e) {
             LoggerHandler.error("Not able to click on Kids Workshops");
-            test.log(Status.FAIL,"Not able to click on Kids Workshops");
+            test.log(Status.FAIL, "Not able to click on Kids Workshops");
+            Screenshot.errorScreenShot("Error Clicking Kids Workshops");
         }
     }
-
+    
     /*
      * a. Method Name: verifyKidsWorkShopsText
      * b. Author Name: Sri Ramya Paladi
@@ -181,18 +188,19 @@ public class HomeDepotDIYWorkShopPage {
     public void clickOnRegisterNow(){
         try {
             helper.waitForElementToBeVisible(HomeDepotDIYWorkShopPageLocator.registerNow, 10);
+            Reporter.attachHighlightedScreenshotToReport("Clicking Register Now", test, HomeDepotDIYWorkShopPageLocator.registerNow);
             helper.clickOnElement(HomeDepotDIYWorkShopPageLocator.registerNow);
-            Thread.sleep(2000);
             String actual = helper.getText(HomeDepotDIYWorkShopPageLocator.registerNow);
             String expected  = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "sheet5", 4, 0);
             Assert.assertEquals(actual, expected);
             LoggerHandler.info("Clicked on Register Now");
-            test.log(Status.PASS,"Clicked on Register Now");
+            test.log(Status.PASS, "Clicked on Register Now");
         } catch (Exception e) {
             LoggerHandler.error("Not able to click on Register Now");
-            test.log(Status.FAIL,"Not able to click on Register Now");
+            test.log(Status.FAIL, "Not able to click on Register Now");
+            Screenshot.errorScreenShot("Error Clicking Register Now");
         }
-    }
+    }    
 
     /*
     * a. Method Name: verifyParentNameText
@@ -352,17 +360,19 @@ public class HomeDepotDIYWorkShopPage {
     public void clickOnRegisterSubmitButton(){
         try {
             helper.waitForElementToBeVisible(HomeDepotDIYWorkShopPageLocator.register, 10);
+            Reporter.attachHighlightedScreenshotToReport("Before Clicking Register", test, HomeDepotDIYWorkShopPageLocator.register);
             helper.clickOnElement(HomeDepotDIYWorkShopPageLocator.register);
             String actual = helper.getText(HomeDepotDIYWorkShopPageLocator.register);
             String expected  = ExcelReader.readData(System.getProperty("user.dir")+"/testdata/ServicesExcel.xlsx", "sheet5", 14, 0);
             Assert.assertEquals(actual, expected);
             LoggerHandler.info("Clicked on Register");
-            test.log(Status.PASS,"Clicked on Register");
+            test.log(Status.PASS, "Clicked on Register");
         } catch (Exception e) {
             LoggerHandler.error("Not able to click on Register");
-            test.log(Status.FAIL,"Not able to click on Register");
+            test.log(Status.FAIL, "Not able to click on Register");
+            Screenshot.errorScreenShot("Error Clicking Register");
         }
-    }
+    }    
 
     /*
     * a. Method Name: clickOnTheDemands
@@ -428,5 +438,15 @@ public class HomeDepotDIYWorkShopPage {
             LoggerHandler.error("Unable to verify the Text RESOURCES");
             test.log(Status.FAIL, "Unable to verify the Text RESOURCES");
         }
+    }
+
+    public void homeDepotDIYWorkShopPageTestCase(){
+        clickOnDIYIcon();
+        clickOnFreeWorkShops();
+        verifyFreeWorkShopsText();
+        clickOnKidsWorkShops();
+        verifyKidsWorkShopsText();
+        clickOnRegisterNow();
+        clickOnRegisterSubmitButton();
     }
 }

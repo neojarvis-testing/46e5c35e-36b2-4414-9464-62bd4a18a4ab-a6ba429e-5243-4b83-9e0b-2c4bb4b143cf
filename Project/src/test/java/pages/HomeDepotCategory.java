@@ -59,10 +59,9 @@ public class HomeDepotCategory {
      * d. Return Type: void
      * e. Parameters: none
      */
-    public void enterValueOnInputBar() {
+    public void enterValueOnInputBar(String value) {
         try {
-            String searchValue = ExcelReader.readData(System.getProperty("user.dir") + "/testdata/jay_test_data.xlsx", "Sheet1", 0, 0);
-            helper.sendData(HomeDepotCategoryLocators.searchInputBar, searchValue);
+            helper.sendData(HomeDepotCategoryLocators.searchInputBar, value);
             test.log(Status.PASS,  "Entered wrench on Input Search Bar");
             LoggerHandler.info("Entered wrench on Input Search Bar");
         } catch (Exception e) {

@@ -14,10 +14,10 @@ public class HomeDepotCategoryStep {
     public void i_click_on_search_input_bar() {
         homeDepotCategory.clickOnSearchInputBar();
     }
-
-    @When("I enter Value On Input Bar")
-    public void i_enter_value_on_input_bar() {
-        homeDepotCategory.enterValueOnInputBar();
+    
+    @When("I enter Value On Input Bar {string}")
+    public void i_enter_value_on_input_bar(String string) {
+        homeDepotCategory.enterValueOnInputBar(string);
     }
 
     @When("I click On Search Icon")

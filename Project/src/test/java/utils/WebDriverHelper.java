@@ -34,7 +34,7 @@ public class WebDriverHelper {
         try {
             new WebDriverWait(driver, Duration.ofSeconds(time)).until(ExpectedConditions.visibilityOfElementLocated(locator));
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
     
@@ -51,7 +51,7 @@ public class WebDriverHelper {
             WebElement element = driver.findElement(locator);
             element.click();
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
 
@@ -69,7 +69,7 @@ public class WebDriverHelper {
             Actions actions = new Actions(driver);
             actions.click(element).build().perform();
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
     
@@ -87,7 +87,7 @@ public class WebDriverHelper {
             WebElement element = driver.findElement(locator);
             element.sendKeys(value);
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
     
@@ -104,7 +104,7 @@ public class WebDriverHelper {
             WebElement element = driver.findElement(locator);
             element.sendKeys(Keys.ENTER);
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
     
@@ -121,7 +121,7 @@ public class WebDriverHelper {
             WebElement element = driver.findElement(locator);
             return element.getText();
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
         return null;
     }
@@ -137,7 +137,7 @@ public class WebDriverHelper {
         try {
             return driver.getTitle();
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
         return null;
     }
@@ -153,7 +153,7 @@ public class WebDriverHelper {
         try {
             return driver.getCurrentUrl();
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
         return null;
     }
@@ -169,7 +169,7 @@ public class WebDriverHelper {
         try {
             driver.navigate().back();
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
     
@@ -188,7 +188,7 @@ public class WebDriverHelper {
             Select select = new Select(element);
             select.selectByVisibleText(value);
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
     
@@ -212,7 +212,7 @@ public class WebDriverHelper {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
     
@@ -230,7 +230,7 @@ public class WebDriverHelper {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("window.scrollBy(arguments[0], arguments[1]);", x, y);
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
     
@@ -248,7 +248,7 @@ public class WebDriverHelper {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].scrollIntoView(true);", element);
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
     
@@ -264,7 +264,7 @@ public class WebDriverHelper {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("window.scrollBy(0, document.body.scrollHeight)");
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
     
@@ -280,7 +280,7 @@ public class WebDriverHelper {
         try {
             return driver.findElements(By.cssSelector(locator));
         } catch (Exception e) { 
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
         return null;
     }

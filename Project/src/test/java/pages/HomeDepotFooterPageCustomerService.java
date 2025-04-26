@@ -27,16 +27,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Clicks on Check Order Status in the footer section
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters:  none
      */
     public void clickOnCheckOrderStatus(){
         try {
             helper.scrollToEnd();
             helper.waitForElementToBeVisible(HomeDepotFooterLocator.checkOrderStatus, 10);
+            Reporter.attachHighlightedScreenshotToReport("Check Order Status", test, HomeDepotFooterLocator.checkOrderStatus);
             helper.clickOnElement(HomeDepotFooterLocator.checkOrderStatus);
             LoggerHandler.info("Clicked on check order status");
-            test.log(Status.INFO, "Clicked on check order status");
+            test.log(Status.PASS, "Clicked on check order status");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("Not clicked on check order status");
             test.log(Status.FAIL, "Not clicked on check order status");
         }
@@ -45,16 +47,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Verifies the URL after clicking on the Check Order Status.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters:  none
      */
     public void verifyOrderStatus(){
         try {
             String text = helper.getUrl();
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Kushal.xlsx", "Sheet1", 0, 1);
+            Reporter.attachHighlightedScreenshotToReport("Verify Order Status", test, HomeDepotFooterLocator.checkOrderStatus);
             Assert.assertTrue(text.contains(expected));
             LoggerHandler.info("URL contains /myaccount/guest-order-tracking");
-            test.log(Status.INFO, "URL contains /myaccount/guest-order-tracking");
+            test.log(Status.PASS, "URL contains /myaccount/guest-order-tracking");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("URL doesn't contains /myaccount/guest-order-tracking");
             test.log(Status.FAIL, "URL doesn't contains /myaccount/guest-order-tracking");
         }
@@ -63,16 +67,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Clicks on Pay Your Credit Card in the footer section
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void clickOnPayYourCreditCard(){
         try {
             helper.scrollToEnd();
             helper.waitForElementToBeVisible(HomeDepotFooterLocator.payYourCreditCard, 10);
+            Reporter.attachHighlightedScreenshotToReport("Pay Your Credit Card", test, HomeDepotFooterLocator.payYourCreditCard);
             helper.clickOnElement(HomeDepotFooterLocator.payYourCreditCard);
             LoggerHandler.info("Clicked on Pay your credit card");
-            test.log(Status.INFO, "Clicked on Pay your credit card");
+            test.log(Status.PASS, "Clicked on Pay your credit card");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("Not Clicked on Pay your credit card");
             test.log(Status.FAIL, "Not Clicked on Pay your credit card");
         }
@@ -81,16 +87,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Verifies the URL after clicking on the Pay Your Credit Card.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void verifyCreditCenter(){
         try {
             String text = helper.getUrl();
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Kushal.xlsx", "Sheet1", 1, 1);
+            Reporter.attachHighlightedScreenshotToReport("Verify Credit Center", test, HomeDepotFooterLocator.payYourCreditCard);
             Assert.assertTrue(text.contains(expected));
             LoggerHandler.info("URL contains /c/credit-center");
-            test.log(Status.INFO, "URL contains /c/credit-center");
+            test.log(Status.PASS, "URL contains /c/credit-center");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("URL doesn't contains /c/credit-center");
             test.log(Status.FAIL, "URL doesn't contains /c/credit-center");
         }
@@ -99,16 +107,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Clicks on Order Cancellation in the footer section.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void clickOnOrderCancellation(){
         try {
             helper.scrollToEnd();
             helper.waitForElementToBeVisible(HomeDepotFooterLocator.orderCancellation, 10);
+            Reporter.attachHighlightedScreenshotToReport("Order Cancellation", test, HomeDepotFooterLocator.orderCancellation);
             helper.clickOnElement(HomeDepotFooterLocator.orderCancellation);
             LoggerHandler.info("Clicked on Order Cancellation");
-            test.log(Status.INFO, "Clicked on Order Cancellation");
+            test.log(Status.PASS, "Clicked on Order Cancellation");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("Not Clicked on Order Cancellation");
             test.log(Status.FAIL, "Not Clicked on Order Cancellation");
         }
@@ -117,16 +127,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Verifies the URL after clicking on the Order Cancellation.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void verifyCustomerCenter(){
         try {
             String text = helper.getUrl();
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Kushal.xlsx", "Sheet1", 2, 1);
+            Reporter.attachHighlightedScreenshotToReport("Verify Customer Center", test, HomeDepotFooterLocator.orderCancellation);
             Assert.assertTrue(text.contains(expected));
             LoggerHandler.info("URL contains /c/Customer_Support_Answers#cancel");
-            test.log(Status.INFO, "URL contains /c/Customer_Support_Answers#cancel");
+            test.log(Status.PASS, "URL contains /c/Customer_Support_Answers#cancel");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("URL doesn't contains /c/Customer_Support_Answers#cancel");
             test.log(Status.FAIL, "URL doesn't contains /c/Customer_Support_Answers#cancel");
         }
@@ -135,16 +147,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Clicks on Return Policy in the footer section.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void clickOnReturnPolicy(){
         try {
             helper.scrollToEnd();
             helper.waitForElementToBeVisible(HomeDepotFooterLocator.returnPolicy, 10);
+            Reporter.attachHighlightedScreenshotToReport("Return Policy", test, HomeDepotFooterLocator.returnPolicy);
             helper.clickOnElement(HomeDepotFooterLocator.returnPolicy);
             LoggerHandler.info("Clicked on Return Policy");
-            test.log(Status.INFO, "Clicked on Return Policy");
+            test.log(Status.PASS, "Clicked on Return Policy");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("Not Clicked on Return Policy");
             test.log(Status.FAIL, "Not Clicked on Return Policy");
         }
@@ -153,16 +167,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Verifies the URL after clicking on the Return Policy.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void verifyReturnPolicy(){
         try {
             String text = helper.getUrl();
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Kushal.xlsx", "Sheet1", 3, 1);
+            Reporter.attachHighlightedScreenshotToReport("Verify Return Policy", test, HomeDepotFooterLocator.returnPolicy);
             Assert.assertTrue(text.contains(expected));
             LoggerHandler.info("URL contains /c/Return_Policy");
-            test.log(Status.INFO, "URL contains /c/Return_Policy");
+            test.log(Status.PASS, "URL contains /c/Return_Policy");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("URL doesn't contains /c/Return_Policy");
             test.log(Status.FAIL, "URL doesn't contains /c/Return_Policy");
         }
@@ -171,16 +187,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Clicks on Refund Policy in the footer section.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void clickOnRefundPolicy(){
         try {
             helper.scrollToEnd();
             helper.waitForElementToBeVisible(HomeDepotFooterLocator.refundPolicy, 10);
+            Reporter.attachHighlightedScreenshotToReport("Refund Policy", test, HomeDepotFooterLocator.refundPolicy);
             helper.clickOnElement(HomeDepotFooterLocator.refundPolicy);
             LoggerHandler.info("Clicked on Refund Policy");
-            test.log(Status.INFO, "Clicked on Refund Policy");
+            test.log(Status.PASS, "Clicked on Refund Policy");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("Not Clicked on Refund Policy");
             test.log(Status.FAIL, "Not Clicked on Refund Policy");
         }
@@ -189,16 +207,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Verifies the URL after clicking on the Refund Policy.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void verifyRefundPolicy(){
         try {
             String text = helper.getUrl();
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Kushal.xlsx", "Sheet1", 4, 1);
+            Reporter.attachHighlightedScreenshotToReport("Verify Refunf Policy", test, HomeDepotFooterLocator.refundPolicy);
             Assert.assertTrue(text.contains(expected));
             LoggerHandler.info("URL contains /c/refund-policy");
-            test.log(Status.INFO, "URL contains /c/refund-policy");
+            test.log(Status.PASS, "URL contains /c/refund-policy");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("URL doesn't contains /c/refund-policy");
             test.log(Status.FAIL, "URL doesn't contains /c/refund-policy");
         }
@@ -207,16 +227,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Clicks on Shipping & Delivery in the footer section.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void clickOnShippingAndDelivery(){
         try {
             helper.scrollToEnd();
             helper.waitForElementToBeVisible(HomeDepotFooterLocator.shippingDelivery, 10);
+            Reporter.attachHighlightedScreenshotToReport("Shipping & Delivery", test, HomeDepotFooterLocator.shippingDelivery);
             helper.clickOnElement(HomeDepotFooterLocator.shippingDelivery);
             LoggerHandler.info("Clicked on Shipping & Delivery");
-            test.log(Status.INFO, "Clicked on Shipping & Delivery");
+            test.log(Status.PASS, "Clicked on Shipping & Delivery");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("Not clicked on Shipping & Delivery");
             test.log(Status.FAIL, "Not clicked on Shipping & Delivery");
         }
@@ -225,16 +247,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Verifies the URL after clicking on the Shipping & Delivery.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void verifyOnlineOrder(){
         try {
             String text = helper.getUrl();
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Kushal.xlsx", "Sheet1", 5, 1);
+            Reporter.attachHighlightedScreenshotToReport("Verify Online Order", test, HomeDepotFooterLocator.shippingDelivery);
             Assert.assertTrue(text.contains(expected));
             LoggerHandler.info("URL contains /c/About_Your_Online_Order");
-            test.log(Status.INFO, "URL contains /c/About_Your_Online_Order");
+            test.log(Status.PASS, "URL contains /c/About_Your_Online_Order");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("URL doesn't contains /c/About_Your_Online_Order");
             test.log(Status.FAIL, "URL doesn't contains /c/About_Your_Online_Order");
         }
@@ -243,16 +267,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Clicks on Product Recalls in the footer section.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void clickOnProductRecalls(){
         try {
             helper.scrollToEnd();
             helper.waitForElementToBeVisible(HomeDepotFooterLocator.productRecalls, 10);
+            Reporter.attachHighlightedScreenshotToReport("Product Recalls", test, HomeDepotFooterLocator.productRecalls);
             helper.clickOnElement(HomeDepotFooterLocator.productRecalls);
             LoggerHandler.info("Clicked on Product Recalls");
-            test.log(Status.INFO, "Clicked on Product Recalls");
+            test.log(Status.PASS, "Clicked on Product Recalls");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("Not clicked on Product Recalls");
             test.log(Status.FAIL, "Not clicked on Product Recalls");
         }
@@ -261,16 +287,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Verifies the URL after clicking on the Product Recalls.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void verifyProductRecalls(){
         try {
             String text = helper.getUrl();
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Kushal.xlsx", "Sheet1", 6, 1);
+            Reporter.attachHighlightedScreenshotToReport("Verify Product Recalls", test, HomeDepotFooterLocator.productRecalls);
             Assert.assertTrue(text.contains(expected));
             LoggerHandler.info("URL contains /c/Product_Recalls");
-            test.log(Status.INFO, "URL contains /c/Product_Recalls");
+            test.log(Status.PASS, "URL contains /c/Product_Recalls");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("URL doesn't contains /c/Product_Recalls");
             test.log(Status.FAIL, "URL doesn't contains /c/Product_Recalls");
         }
@@ -279,16 +307,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Clicks on Preference Center in the footer section.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void clickOnMyPreferenceCenter(){
         try {
             helper.scrollToEnd();
             helper.waitForElementToBeVisible(HomeDepotFooterLocator.myPreferenceCenter, 10);
+            Reporter.attachHighlightedScreenshotToReport("My Preference Center", test, HomeDepotFooterLocator.myPreferenceCenter);
             helper.clickOnElement(HomeDepotFooterLocator.myPreferenceCenter);
             LoggerHandler.info("Clicked on My Preference center");
-            test.log(Status.INFO, "Clicked on My Preference center");
+            test.log(Status.PASS, "Clicked on My Preference center");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("Not clicked on My Preference center");
             test.log(Status.FAIL, "Not clicked on My Preference center");
         }
@@ -297,16 +327,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Verifies the URL after clicking on the My Preference Center.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void verifyMyPreferenceCenter(){
         try {
             String text = helper.getUrl();
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Kushal.xlsx", "Sheet1", 7, 1);
+            Reporter.attachHighlightedScreenshotToReport("Verify My Preference Center", test, HomeDepotFooterLocator.myPreferenceCenter);
             Assert.assertTrue(text.contains(expected));
             LoggerHandler.info("URL contains privacy/MyPreferenceCenter");
-            test.log(Status.INFO, "URL contains privacy/MyPreferenceCenter");
+            test.log(Status.PASS, "URL contains privacy/MyPreferenceCenter");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("URL doesn't contains privacy/MyPreferenceCenter");
             test.log(Status.FAIL, "URL doesn't contains privacy/MyPreferenceCenter");
         }
@@ -315,16 +347,18 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Clicks on Preference Center in the footer section.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters: none
      */
     public void clickOnPrivacyAndSecurityCenter(){
         try {
             helper.scrollToEnd();
             helper.waitForElementToBeVisible(HomeDepotFooterLocator.privacySecurityCentre, 10);
+            Reporter.attachHighlightedScreenshotToReport("Privacy & Security Center", test, HomeDepotFooterLocator.privacySecurityCentre);
             helper.clickOnElement(HomeDepotFooterLocator.privacySecurityCentre);
             LoggerHandler.info("Clicked on Privacy Security Center");
-            test.log(Status.INFO, "Clicked on Privacy Security Center");
+            test.log(Status.PASS, "Clicked on Privacy Security Center");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("Not clicked on Privacy Security Center");
             test.log(Status.FAIL, "Not clicked on Privacy Security Center");
         }
@@ -333,18 +367,20 @@ public class HomeDepotFooterPageCustomerService {
      * b. Author Name: Kushal
      * c. Description: Verifies the URL after clicking on the Privacy And Security Center.
      * d. Return Type: void
-     * e. Parameters:None
+     * e. Parameters:  none
      */
     public void verifyPrivacyOverview(){
         try {
             String text = helper.getUrl();
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/Kushal.xlsx", "Sheet1", 8, 1);
+            Reporter.attachHighlightedScreenshotToReport("Verify Privacy Overview", test, HomeDepotFooterLocator.privacySecurityCentre);
             Assert.assertTrue(text.contains(expected));
             Screenshot.captureScreenShot("Customer Services");
             Reporter.attachScreenshotToReport("Customer Services", test, "Attach");
             LoggerHandler.info("URL contains privacy/overview");
-            test.log(Status.INFO, "URL contains privacy/overview");
+            test.log(Status.PASS, "URL contains privacy/overview");
         } catch (Exception e) {
+            Screenshot.errorScreenShot("Failed screenshot");
             LoggerHandler.error("URL doesn't contains privacy/overview");
             test.log(Status.FAIL, "URL doesn't contains privacy/overview");
         }

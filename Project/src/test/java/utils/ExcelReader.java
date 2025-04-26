@@ -38,10 +38,10 @@ public class ExcelReader {
 	            String value=cell.toString();
 	            return value;
 	        }catch(FileNotFoundException e){
-	            e.printStackTrace();
+	            LoggerHandler.error(e.getMessage());
 	        } 
 	        catch (IOException e) {
-	            e.printStackTrace();
+	            LoggerHandler.error(e.getMessage());
 	        }
 	        return null;
 	    }
@@ -71,10 +71,10 @@ public class ExcelReader {
 	            }
 	            return data;
 	        }catch(FileNotFoundException e){
-	            e.printStackTrace();
+	            LoggerHandler.error(e.getMessage());
 	        } 
 	        catch (IOException e) {
-	            e.printStackTrace();
+	            LoggerHandler.error(e.getMessage());
 	        }
 	        return null;
 	    }

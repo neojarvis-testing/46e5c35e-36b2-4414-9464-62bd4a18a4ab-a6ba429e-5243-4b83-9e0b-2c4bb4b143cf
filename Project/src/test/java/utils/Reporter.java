@@ -63,7 +63,7 @@ public class Reporter extends Base {
             Files.copy(file, target);
         }
         catch(IOException e){
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
         return destPath;
     }
@@ -79,7 +79,7 @@ public class Reporter extends Base {
             String screenshotPath = captureScreenShot(filename);
             test.log(Status.INFO, description, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
     
@@ -113,14 +113,14 @@ public class Reporter extends Base {
             try {
                 Files.copy(file, target);
             } catch (IOException e) {
-                e.printStackTrace();
+                LoggerHandler.error(e.getMessage());
             }
             
             js.executeScript("arguments[0].style.backgroundColor='';", element);
             
             return destPath;
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
         return null;
     }
@@ -136,7 +136,7 @@ public class Reporter extends Base {
             String screenshotPath = captureHighlightScreenShot(filename, locator);
             test.log(Status.INFO, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
 }

@@ -66,7 +66,7 @@ public class TriggerReport {
             Transport.send(message);
             System.out.println("Email sent successfully!");
         }catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.error(e.getMessage());
         }
     }
 }

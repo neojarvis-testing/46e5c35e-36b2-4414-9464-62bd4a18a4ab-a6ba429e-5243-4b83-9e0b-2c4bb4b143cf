@@ -334,24 +334,4 @@ public class HomeDepotServicesPage {
             test.log(Status.FAIL, "Not able to Navigate back to Previous Page");
         }
     }
-
-    public void homeDepotServicesPageTestCase(){
-            clickOnServicesIcon();
-            verifyServicesText();
-            clickOnInstallation();
-            clickOnViewAllInstallation();
-            verifyHomeServicesText();
-            clickOnFlooring();
-            verifyFlooringText();
-            navigateBackToPreviousPage();
-            clickOnBathroom();
-            verifyBathroomText();
-            navigateBackToPreviousPage();
-            clickOnDoorsAndWindows();
-            verifyWindowServicesText();
-            navigateBackToPreviousPage();
-            clickOnHeating();
-            verifyHeatingText();
-            navigateBackToPreviousPage();
-    }
 }

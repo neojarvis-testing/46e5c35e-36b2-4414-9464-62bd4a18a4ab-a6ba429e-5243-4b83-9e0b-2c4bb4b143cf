@@ -42,6 +42,7 @@ public class HomeDepotBuildingMaterials {
             test.log(Status.PASS, "Scroll to Shop By Category");
             LoggerHandler.info("Scroll to Shop By Category");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot Scroll to Shop By Category");
             LoggerHandler.error("Cannot Scroll to Shop By Category");
         }
@@ -56,10 +57,12 @@ public class HomeDepotBuildingMaterials {
     public void clickOnBuildingMaterials(){
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.buildingMaterials,3);
+            Reporter.attachHighlightedScreenshotToReport("Building Materials", test, HomeDepotBuildingMaterialsLocator.buildingMaterials);
             webDriverHelper.clickOnElement(HomeDepotBuildingMaterialsLocator.buildingMaterials);
             test.log(Status.PASS, "Click on Building Materials");
             LoggerHandler.info("Click on Building Materials");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot Click on Building Materials");
             LoggerHandler.error("Cannot Click on Building Materials");
         }
@@ -75,11 +78,13 @@ public class HomeDepotBuildingMaterials {
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.titleText,3);
             String text=webDriverHelper.getText(HomeDepotBuildingMaterialsLocator.titleText);
+            Reporter.attachHighlightedScreenshotToReport("Building Materials Text", test, HomeDepotBuildingMaterialsLocator.titleText);
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/jahnavi.xlsx", "Sheet1", 0, 0);
             Assert.assertTrue(text.contains(expected));
             test.log(Status.PASS, "Verify on Building Materials");
             LoggerHandler.info("Verify on Building Materials");
         }catch(AssertionError|Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot Verify on Building Materials");
             LoggerHandler.error("Cannot Verify on Building Materials");
         }
@@ -112,10 +117,12 @@ public class HomeDepotBuildingMaterials {
     public void clickOnConcrete(){
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.concrete,3);
+            Reporter.attachHighlightedScreenshotToReport("Concrete", test, HomeDepotBuildingMaterialsLocator.concrete);
             webDriverHelper.clickOnElement(HomeDepotBuildingMaterialsLocator.concrete);
             test.log(Status.PASS, "Click on concrete");
             LoggerHandler.info("Click on concrete");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot click on concrete");
             LoggerHandler.error("Cannot click on concrete");
         }
@@ -131,11 +138,13 @@ public class HomeDepotBuildingMaterials {
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.titleText,3);
             String text=webDriverHelper.getText(HomeDepotBuildingMaterialsLocator.titleText);
+            Reporter.attachHighlightedScreenshotToReport("Concrete Text", test, HomeDepotBuildingMaterialsLocator.titleText);
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/jahnavi.xlsx", "Sheet1", 1, 0);
             Assert.assertTrue(text.contains(expected));
             test.log(Status.PASS, "Verify on Concrete");
             LoggerHandler.info("Verify on Concrete");
         }catch(AssertionError|Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot Verify on Concrete");
             LoggerHandler.error("Cannot Verify on Concrete");
         }
@@ -150,10 +159,12 @@ public class HomeDepotBuildingMaterials {
     public void clickOnDecking(){
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.decking,3);
+            Reporter.attachHighlightedScreenshotToReport("Decking", test, HomeDepotBuildingMaterialsLocator.decking);
             webDriverHelper.clickOnElement(HomeDepotBuildingMaterialsLocator.decking);
             test.log(Status.PASS, "Click on decking");
             LoggerHandler.info("Click on decking");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot click on decking");
             LoggerHandler.error("Cannot click on decking");
         }
@@ -169,11 +180,13 @@ public class HomeDepotBuildingMaterials {
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.titleText,3);
             String text=webDriverHelper.getText(HomeDepotBuildingMaterialsLocator.titleText);
+            Reporter.attachHighlightedScreenshotToReport("Decking Text", test, HomeDepotBuildingMaterialsLocator.titleText);
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/jahnavi.xlsx", "Sheet1", 2, 0);
             Assert.assertTrue(text.contains(expected));
             test.log(Status.PASS, "Verify on Decking");
             LoggerHandler.info("Verify on Decking");
         }catch(AssertionError|Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot Verify on Decking");
             LoggerHandler.error("Cannot Verify on Decking");
         }
@@ -188,10 +201,12 @@ public class HomeDepotBuildingMaterials {
     public void clickOnInsulation(){
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.insulation,3);
+            Reporter.attachHighlightedScreenshotToReport("Insulation", test, HomeDepotBuildingMaterialsLocator.insulation);
             webDriverHelper.clickOnElement(HomeDepotBuildingMaterialsLocator.insulation);
             test.log(Status.PASS, "Click on insulation");
             LoggerHandler.info("Click on insulation");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot click on insulation");
             LoggerHandler.error("Cannot click on insulation");
         }
@@ -207,11 +222,13 @@ public class HomeDepotBuildingMaterials {
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.titleText,3);
             String text=webDriverHelper.getText(HomeDepotBuildingMaterialsLocator.titleText);
+            Reporter.attachHighlightedScreenshotToReport("Insulation Text", test, HomeDepotBuildingMaterialsLocator.titleText);
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/jahnavi.xlsx", "Sheet1", 3, 0);
             Assert.assertTrue(text.contains(expected));
             test.log(Status.PASS, "Verify on Insulation");
             LoggerHandler.info("Verify on Insulation");
         }catch(AssertionError|Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot Verify on Insulation");
             LoggerHandler.error("Cannot Verify on Insulation");
         }
@@ -226,10 +243,12 @@ public class HomeDepotBuildingMaterials {
     public void clickOnDryWall(){
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.dryWall,3);
+            Reporter.attachHighlightedScreenshotToReport("DryWall", test, HomeDepotBuildingMaterialsLocator.dryWall);
             webDriverHelper.clickOnElement(HomeDepotBuildingMaterialsLocator.dryWall);
             test.log(Status.PASS, "Click on drywall");
             LoggerHandler.info("Click on drywall");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot click on drywall");
             LoggerHandler.error("Cannot click on drywall");
         }
@@ -245,11 +264,13 @@ public class HomeDepotBuildingMaterials {
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.titleText,3);
             String text=webDriverHelper.getText(HomeDepotBuildingMaterialsLocator.titleText);
+            Reporter.attachHighlightedScreenshotToReport("DryWall Text", test, HomeDepotBuildingMaterialsLocator.titleText);
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/jahnavi.xlsx", "Sheet1", 4, 0);
             Assert.assertTrue(text.contains(expected));
             test.log(Status.PASS, "Verify on Drywall");
             LoggerHandler.info("Verify on Drywall");
         }catch(AssertionError|Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot Verify on Drywall");
             LoggerHandler.error("Cannot Verify on Drywall");
         }
@@ -264,10 +285,12 @@ public class HomeDepotBuildingMaterials {
     public void clickOnShopAllDryWall(){
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.shopAllDrywall,3);
+            Reporter.attachHighlightedScreenshotToReport("Shop All DryWall", test, HomeDepotBuildingMaterialsLocator.shopAllDrywall);
             webDriverHelper.clickOnElement(HomeDepotBuildingMaterialsLocator.shopAllDrywall);
             test.log(Status.PASS, "Click on shop all drywall");
             LoggerHandler.info("Click on shop all drywall");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot click on shop all drywall");
             LoggerHandler.error("Cannot click on shop all drywall");
         }
@@ -282,12 +305,14 @@ public class HomeDepotBuildingMaterials {
     public void clickOnAllFilters(){
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotBuildingMaterialsLocator.allFilters,3);
+            Reporter.attachHighlightedScreenshotToReport("All Filters", test, HomeDepotBuildingMaterialsLocator.allFilters);
             webDriverHelper.clickOnElement(HomeDepotBuildingMaterialsLocator.allFilters);
             test.log(Status.PASS, "Click on allFilters");
             LoggerHandler.info("Click on allFilters");
             Screenshot.captureScreenShot("Drywall");
             Reporter.attachScreenshotToReport("Drywall", test, "Drywall");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot click on allFilters");
             LoggerHandler.error("Cannot click on allFilters");
         }

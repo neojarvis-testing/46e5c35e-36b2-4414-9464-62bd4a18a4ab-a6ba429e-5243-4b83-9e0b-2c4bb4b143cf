@@ -36,10 +36,12 @@ public class HomeDepotFooterLinksPage {
         try{
             webDriverHelper.scrollToEnd();
             webDriverHelper.waitForElementToBeVisible(HomeDepotFooterLinksLocator.storeLocator,3);
+            Reporter.attachHighlightedScreenshotToReport("Store Locator", test, HomeDepotFooterLinksLocator.storeLocator);
             webDriverHelper.clickOnElement(HomeDepotFooterLinksLocator.storeLocator);
             test.log(Status.PASS, "Click on Store Locator");
             LoggerHandler.info("Click on Store Locator");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot Click on Store Locator");
             LoggerHandler.error("Cannot Click on Store Locator");
         }
@@ -55,11 +57,13 @@ public class HomeDepotFooterLinksPage {
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotFooterLinksLocator.titleText,3);
             String text=webDriverHelper.getText(HomeDepotFooterLinksLocator.titleText);
+            Reporter.attachHighlightedScreenshotToReport("Store Locator Text", test, HomeDepotFooterLinksLocator.titleText);
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/jahnavi.xlsx", "Sheet1", 0, 1);
             Assert.assertTrue(text.contains(expected));
             test.log(Status.PASS, "verify store locator");
             LoggerHandler.info("verify store locator");
         }catch(AssertionError|Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot Verify on Store Locator");
             LoggerHandler.error("Cannot Verify on Store Locator");
         }
@@ -92,10 +96,12 @@ public class HomeDepotFooterLinksPage {
     public void clickOnPrivacy(){
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotFooterLinksLocator.privacySecurity,3);
+            Reporter.attachHighlightedScreenshotToReport("Privacy", test, HomeDepotFooterLinksLocator.privacySecurity);
             webDriverHelper.clickOnElement(HomeDepotFooterLinksLocator.privacySecurity);
             test.log(Status.PASS, "Click on Privacy");
             LoggerHandler.info("Click on Privacy");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot click on Privacy");
             LoggerHandler.error("Cannot click on Privacy");
         }
@@ -111,11 +117,13 @@ public class HomeDepotFooterLinksPage {
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotFooterLinksLocator.privacyText,3);
             String text=webDriverHelper.getText(HomeDepotFooterLinksLocator.privacyText);
+            Reporter.attachHighlightedScreenshotToReport("Privacy Text", test, HomeDepotFooterLinksLocator.privacyText);
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/jahnavi.xlsx", "Sheet1", 1, 1);
             Assert.assertTrue(text.contains(expected));
             test.log(Status.PASS, "verify Privacy & Security Center");
             LoggerHandler.info("verify Privacy & Security Center");
         }catch(AssertionError|Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot Verify Privacy & Security Center");
             LoggerHandler.error("Cannot Verify Privacy & Security Center");
         }
@@ -130,10 +138,12 @@ public class HomeDepotFooterLinksPage {
     public void clickOnTerm(){
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotFooterLinksLocator.terms,3);
+            Reporter.attachHighlightedScreenshotToReport("Term", test, HomeDepotFooterLinksLocator.terms);
             webDriverHelper.clickOnElement(HomeDepotFooterLinksLocator.terms);
             test.log(Status.PASS, "click on terms");
             LoggerHandler.info("click on terms");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot click on terms");
             LoggerHandler.error("Cannot click on terms");
         }
@@ -153,6 +163,7 @@ public class HomeDepotFooterLinksPage {
             test.log(Status.PASS, "verify terms");
             LoggerHandler.info("verify terms");
         }catch(AssertionError|Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot verify terms");
             LoggerHandler.error("Cannot verify terms");
         }
@@ -168,10 +179,12 @@ public class HomeDepotFooterLinksPage {
         try{
             webDriverHelper.scrollToEnd();
             webDriverHelper.waitForElementToBeVisible(HomeDepotFooterLinksLocator.myPreference,3);
+            Reporter.attachHighlightedScreenshotToReport("Preference", test, HomeDepotFooterLinksLocator.myPreference);
             webDriverHelper.clickOnElement(HomeDepotFooterLinksLocator.myPreference);
             test.log(Status.PASS, "click on preference");
             LoggerHandler.info("click on preference");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot click on preference");
             LoggerHandler.error("Cannot click on preference");
         }
@@ -186,12 +199,12 @@ public class HomeDepotFooterLinksPage {
     public void verifyPreference(){
         try{
             String text=webDriverHelper.getUrl();
-            System.out.println(text);
             String expected=ExcelReader.readData(System.getProperty("user.dir")+"/testdata/jahnavi.xlsx", "Sheet1", 3, 1);
             Assert.assertTrue(text.contains(expected));
             test.log(Status.PASS, "verify preference");
             LoggerHandler.info("verify preference");
         }catch(AssertionError|Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot verify preference");
             LoggerHandler.error("Cannot verify preference");
         }
@@ -206,10 +219,12 @@ public class HomeDepotFooterLinksPage {
     public void clickOnSiteMap(){
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotFooterLinksLocator.siteMap,3);
+            Reporter.attachHighlightedScreenshotToReport("Site Map", test, HomeDepotFooterLinksLocator.siteMap);
             webDriverHelper.clickOnElement(HomeDepotFooterLinksLocator.siteMap);
             test.log(Status.PASS, "click on sitemap");
             LoggerHandler.info("click on sitemap");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot click on sitemap");
             LoggerHandler.error("Cannot click on sitemap");
         }
@@ -229,6 +244,7 @@ public class HomeDepotFooterLinksPage {
             test.log(Status.PASS, "verify sitemap");
             LoggerHandler.info("verify sitemap");
         }catch(AssertionError|Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot verify sitemap");
             LoggerHandler.error("Cannot verify sitemap");
         }
@@ -243,10 +259,12 @@ public class HomeDepotFooterLinksPage {
     public void clickOnStoreDirectory(){
         try{
             webDriverHelper.waitForElementToBeVisible(HomeDepotFooterLinksLocator.storeDirectory,3);
+            Reporter.attachHighlightedScreenshotToReport("Store Directory", test, HomeDepotFooterLinksLocator.storeDirectory);
             webDriverHelper.clickOnElement(HomeDepotFooterLinksLocator.storeDirectory);
             test.log(Status.PASS, "click on StoreDirectory");
             LoggerHandler.info("click on StoreDirectory");
         }catch(Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot click on StoreDirectory");
             LoggerHandler.error("Cannot click on StoreDirectory");
         }
@@ -268,8 +286,10 @@ public class HomeDepotFooterLinksPage {
             Screenshot.captureScreenShot("store_directory");
             Reporter.attachScreenshotToReport( "store_directory", test,  "store_directory");
         }catch(AssertionError|Exception e){
+            Screenshot.captureScreenShot("Failed To Perform");
             test.log(Status.FAIL, "Cannot verify StoreDirectory");
             LoggerHandler.error("Cannot verify StoreDirectory");
         }
     }
+
 }

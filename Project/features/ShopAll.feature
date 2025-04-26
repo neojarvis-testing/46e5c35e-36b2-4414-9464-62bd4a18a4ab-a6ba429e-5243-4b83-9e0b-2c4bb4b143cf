@@ -1,3 +1,4 @@
+@a
 Feature: Navigate Shop and Verify Items
 
   Scenario: Explore shop savings, departments
